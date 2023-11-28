@@ -1,0 +1,10 @@
+.layout-container:nth-child(even) {
+    background: #d4e2e9;
+}
+.layout-container:last-child .stack-container:last-child .stack {
+    display: none;
+}
+
+.layout-container:first-child .layout {
+    min-height: 100vh;
+}

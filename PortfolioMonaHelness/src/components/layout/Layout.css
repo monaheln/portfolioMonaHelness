@@ -1,0 +1,19 @@
+.layout {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 4rem;
+}
+.stack-container {
+    position: relative;
+}
+
+.stack {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}

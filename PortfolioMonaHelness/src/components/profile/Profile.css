@@ -1,0 +1,156 @@
+#profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.4em;
+    animation: fadeIn 2s ease-in;
+    width: 100%;
+    max-width: 325px;
+}
+
+#profile:before,
+#profile > :first-child:before {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-color: #937150;;
+    border-style: solid;
+    content: " ";
+    padding: 1em;
+}
+
+#profile:before {
+    top: 0;
+    left: 0;
+    border-width: 1px 0 0 1px;
+    z-index: -1;
+    animation: fadeInRight 2s ease-in-out;
+}
+
+#profile > :first-child:before {
+    bottom: 0;
+    right: 0;
+    border-width: 0 1px 1px 0;
+    z-index: -1;
+    animation: fadeInLeft 2s ease-in-out;
+}
+
+#profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#profile-image {
+    position: relative;
+    height: 7em;
+    width: 7em;
+    object-fit: cover;
+    background-color: transparent;
+    border: solid 1px #ffff;
+    border-radius: 50%;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+#img-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#profile-name {
+    margin-left: 1em;
+    font-size: 1.6rem;
+    text-align: justify;
+    width: 100%;
+    text-overflow: inherit;
+    justify-self: center;
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #dcd3c8, #a48364, #905f31);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+#profile-title {
+    margin-left: 1em;
+    font-size: 1em;
+    color: #ffbcff;
+    font-weight: 600;
+    justify-self: center;
+}
+
+#button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 0.4em;
+}
+
+#profile-button {
+    height: 2em;
+    border-radius: 0.5em;
+    border: solid 1px #fff;
+}
+#profile-button:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (min-width: 480px) {
+    #profile {
+        max-width: 480px;
+    }
+    #profile-name {
+        font-size: 1.2em;
+        text-align: start;
+    }
+    #profile-name {
+        font-size: 2em;
+    }
+    #profile-image {
+        height: 7em;
+        width: 7em;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

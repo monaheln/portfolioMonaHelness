@@ -1,0 +1,42 @@
+.main-browser {
+    border: solid 10px #000;
+    border-radius: 2em;
+    background-color: #5179a4;
+    border-radius: 3em;
+    display: flex;
+    flex-direction: column;
+
+    margin: 2em 0;
+}
+
+.icon-window {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: space-between;
+    border-bottom: solid 10px #000;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    padding: 1em;
+}
+
+.icon-circle {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: 1em;
+}
+
+.content-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em;
+    height: 100%;
+    min-height: 250px;
+}

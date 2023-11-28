@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: #333366;
+    text-decoration: none;
+}
+
+p {
+    color: #937150;
+
+    overflow-wrap: break-word;
+    /* text-align: justify; */
+    /* text-align: start; */
+    font-size: 1rem;
+}
+button:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (min-width: 630px) {
+    p {
+        font-size: 1.1rem;
+    }
+}

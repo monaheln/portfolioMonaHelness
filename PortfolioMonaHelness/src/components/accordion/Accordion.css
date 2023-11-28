@@ -1,0 +1,93 @@
+.accordion {
+    width: 100%;
+}
+
+.accordion-content {
+    overflow: auto;
+    text-align: start;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: max-height 0.3s ease;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    opacity: 50%;
+}
+.panel-title {
+    transform: translateX(-12px);
+    font-size: 1.5rem;
+    width: 100%;
+    text-overflow: inherit;
+    background-image: linear-gradient(45deg, #dcd3c8, #a48364, #905f31);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.panel-text-container {
+    width: 100%;
+}
+
+.panel-content {
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.panel-line {
+    width: 24px;
+    height: 3px;
+    background-color: #a48364;
+}
+
+.panel {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.panel-title-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ae9379;
+    transition: transform 0.3s ease;
+    bottom: 10%;
+    right: 50%;
+}
+@media screen and (min-width: 480px) {
+    .panel-title-container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .entry:nth-child(even) .panel-title-container {
+        flex-direction: row-reverse;
+    }
+    .entry:nth-child(odd) .panel-title {
+        transform: translateX(12px);
+    }
+    .panel:hover {
+        /* background-color: #ede5dd; */
+    }
+    .panel {
+        padding-left: 18px;
+    }
+    .panel-content {
+        font-size: 1.5rem;
+    }
+}
